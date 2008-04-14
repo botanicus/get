@@ -1,0 +1,2 @@
+prochazeni domeny
+domain match (www.railcast/\d{3}/.+\.mov$)
