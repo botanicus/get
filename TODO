@@ -1,2 +1,8 @@
 prochazeni domeny
 domain match (www.railcast/\d{3}/.+\.mov$)
+
+get botablog.cz --recursive --pdf # get all PDF on botablog.cz
+get botablog.cz/my-post --extensions jpg,png,gif
+get botablog.cz --wget
+get botablog.cz --download
+default: print linku na STDOUT
