@@ -4,6 +4,7 @@ require "mime/types"
 require "uri"
 
 # TODO: Rewrite it for net/http etc, authentication and content_type
+# MRDA SE TO S LOKALNIMA LINKAMA, KUNDA PYCA!!!!
 class Page
   attr_accessor :extensions # array
   attr_accessor :directory  # string
@@ -13,10 +14,10 @@ class Page
   PERMITTED_MIMES = %w{text/html application/xml+xhtml}
 
   def initialize(url) # http://www.root.cz or just www.root.cz
-    @@visited ||= UniqueArray.new
+    @@visited ||= EasyRuby::UniqueArray.new
     url = url.match(/^\w+:\/{2}/) ? url : "http://#{url}"
     @url = URI.parse(url)
-    @@urls ||= UniqueArray.new
+    @@urls ||= EasyRuby::UniqueArray.new
     @extensions = Array.new
     @directory  = File.join(ENV["HOME"], "Downloads")
     @schemes = %{http https ftp ftps svn git}
@@ -57,7 +58,7 @@ class Page
   # autentizace
   def recursive
     self.proceed
-    result = UniqueArray.new
+    result = EasyRuby::UniqueArray.new
     @@urls.each do |url| # ch
       next unless url.same_host?(@url)
       puts "#{@@urls.index(url)} of #{@@urls.length}" # ch 2

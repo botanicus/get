@@ -1,5 +1,5 @@
 require "active_support"
-require File.dirname(__FILE__) + "/errors"
+# require File.dirname(__FILE__) + "/errors"
 # TODO: it will be external library
 
 class Size

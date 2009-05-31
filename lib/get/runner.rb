@@ -1,5 +1,5 @@
 # Recursive
-output = UniqueArray.new
+output = EasyRuby::UniqueArray.new
 if OPTS[:recursive]
   log("Recursive ...")
   output.push(*@page.recursive)

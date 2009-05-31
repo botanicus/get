@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/env ruby1.8
 # coding=utf-8
 
 =begin rdoc
@@ -9,14 +9,14 @@
 
 require "optparse"
 require "rdoc/usage"
-require File.dirname(__FILE__) + "/../lib/get/page"
-require File.dirname(__FILE__) + "/../lib/get/uri"
-require File.dirname(__FILE__) + "/../lib/get/log"
-require File.dirname(__FILE__) + "/../lib/get/option_parser"
-require File.dirname(__FILE__) + "/../lib/get/unique_array"
-require File.dirname(__FILE__) + "/../lib/get/mime_types"
-require File.dirname(__FILE__) + "/../lib/shell/size"
-require File.dirname(__FILE__) + "/../lib/shell/option_parser"
+require "easyruby/core/unique_array"
+require "get/page"
+require "get/uri"
+require "get/log"
+require "get/option_parser"
+require "get/mime_types"
+require "shell/size"
+require "shell/option_parser"
 
 # Default OPTS
 OPTS = {
