@@ -7,6 +7,7 @@
   -t --to [download dir]
 =end
 
+# TODO: base = File.symlink?(__FILE__) ? File.readlink(__FILE__) : __FILE__
 require "optparse"
 require "rdoc/usage"
 require "easyruby/core/unique_array"

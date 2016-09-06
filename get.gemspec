@@ -15,8 +15,9 @@ SPECIFICATION = ::Gem::Specification.new do |s|
   s.summary = "Get is CLI download manager for automatic downloading the whole files of specified type from given web."
   s.description = "" # TODO: long description
   s.cert_chain = nil
-  s.email = ["knava.bestvinensis", "gmail.com"].join("@")
-  s.files = Dir.glob("**/*") - Dir.glob("pkg/*")
+  s.email = Base64.decode64("c3Rhc3RueUAxMDFpZGVhcy5jeg==\n")
+  s.files = `git ls-files`.split("\n")
+
   s.executables = ["get.rb"]
   s.default_executable = "get.rb"
   # s.add_dependency "xmpp4r"
